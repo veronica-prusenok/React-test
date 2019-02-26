@@ -1,0 +1,9 @@
+<script type="text/javascript">
+  function getDimensionalArray(array, size) {
+    var result = [];
+    while (array.length) {
+      result.push(array.splice(0, size));
+    }
+    return result;
+  }
+</script>

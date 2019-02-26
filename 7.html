@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	class Holder {
+		constructor(value) {
+			this.value = value;
+		}
+
+		getValue() {
+			return this.value;
+		}
+
+		setValue(value) {
+			this.value = value;
+		}
+	}
+
+	function createHolder(value) {
+		return new Holder(value);
+	}
+</script>

@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  function getLowerestIndex(array, elem) {
+    array.push(elem);
+    var sorted = array.sort((a, b) => a - b);
+    var index = array.indexOf(elem);
+    return index;
+  }
+</script>

@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <input type="text" id="string"></input>
+    <button onclick="showResult()">Отправить</button>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+      function showResult() {
+        var string = document.getElementById("string").value
+        var container = document.getElementById("result")
+        container.innerHTML = "The shortest length of the word: " + shortestWordLength(string)
+      }
+
+      function shortestWordLength(str) {
+        var array = str.split(/\s+/);
+        var wordLength = array.map((i) => i.length);
+        var shortest = Math.min.apply(Math, wordLength);
+        return shortest;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  function frame(array, elem) {
+    var longest = longestWordLength(array);
+    elem = String(elem);
+
+    console.log(elem.repeat(longest+4));
+    array.forEach(function(element) {
+      var spaces = element.length != longest ? longest - element.length : 0
+      console.log(elem + " " + element + " ".repeat(spaces+1) + elem);
+    });
+    console.log(elem.repeat(longest+4));
+  }
+
+  function longestWordLength(array) {
+    var wordLength = array.map((i) => i.length);
+    var longest = Math.max.apply(Math, wordLength);
+    return longest;
+  }
+</script>

@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <input type="number" id="quantity"></input>
+    <button onclick="showResult()">Отправить</button>
+
+    <script type="text/javascript">
+      function showResult() {
+        var q = document.getElementById("quantity").value
+        document.body.innerHTML += "<br/>"
+        for(var i=1; i<=q; i++) {
+          document.body.innerHTML += i + " sheep..."
+        }
+      }
+    </script>
+  </body>
+</html>

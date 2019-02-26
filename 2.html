@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <input type="number" id="quantity" min="0" max="30" step="1"></input>
+    <button onclick="showResult()">Отправить</button>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+      function showResult() {
+        var q = document.getElementById("quantity").value
+        var container = document.getElementById("result")
+        container.innerHTML = ""
+        for(var i=1; i<=q; i++) {
+          for(var j=1; j<=q; j++) {
+            var elem = document.createElement('div');
+            elem.style.cssText = 'width:30px;height:15px;margin:5px;display:inline-block;';
+            elem.style.backgroundColor = generateRandomColor();
+            container.append(elem)
+          }
+          container.append(document.createElement("br"))
+        }
+      }
+
+      function generateRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>
